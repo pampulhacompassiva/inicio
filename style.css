@@ -1,6 +1,15 @@
 /* Importação de Fontes (Exemplo com Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap');
 
+html {
+    box-sizing: border-box; /* Inclui padding e border na largura/altura */
+    font-size: 16px; /* Define 1rem como 16px. Se quiser 1rem=10px, use 62.5% aqui. */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Aplica box-sizing a todos os elementos */
+}
+
 /* Reset Básico e Estilos Globais */
 * {
     margin: 0;
@@ -24,15 +33,21 @@ img {
     width: 100%;
 }
 
+
+
+
+
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #10add8a6;;
+    background-color: #627ea87f;
     position: sticky;
     top: 0;
     z-index: 1000;
+    
 }
 
 .nav-container .logo {
@@ -43,6 +58,8 @@ img {
 .nav-menu {
     display: flex;
     gap: 1.5rem;
+
+
 }
 
 .nav-menu a {
@@ -51,6 +68,8 @@ img {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     transition: color 0.3s ease;
+
+    
 }
 
 .nav-menu a:hover {
@@ -73,6 +92,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: url(./pampulha.jpg) no-repeat center center/cover;
     background-color: #60c9e6; 
     color: #fff;
     padding: 3rem;
@@ -84,8 +104,9 @@ img {
     margin: 0px;
     padding: 0px;
     font-size: 7rem; 
-    font-weight: 900px;
+    font-weight: 900rem;
     line-height: 1.2; 
+    
 
 }
 
@@ -154,7 +175,7 @@ img {
 }
 
 .card1 {
-    background-color: #0c4b4b;
+    background-color: #0c4644;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -182,11 +203,13 @@ img {
 
 .card1 h6 { /* Ou .card1 p, dependendo da tag que você usa para o texto */
     font-family: 'Roboto', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 1rem;
     color: #eae5e5;
     text-align: center;
     line-height: 1.5rem;
+    justify-content: center;
+
 }
 
 /* Opcional: Para alinhar o conteúdo dos cards ao topo, se eles tiverem alturas variadas inicialmente */
@@ -254,4 +277,71 @@ img {
 .card button:hover {
     background-color: #c0341c; /* Tom mais escuro no hover */
 }
+
+
+
+.faq-container {
+    display: flex; /* Arrange items in columns */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Space between columns and rows */
+    max-width: 900px; /* Adjust as needed for your layout */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+.faq-item {
+    flex: 1 1 48%; /* Allows two items per row, with some flexibility */
+    min-width: 300px; /* Ensures items don't get too small on narrow screens */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners for the boxes */
+    overflow: hidden; /* Ensures border-radius applies correctly to content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    background-color: #fff; /* White background */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #c43b3b; /* Light background for the question header */
+    color: #2c1b1b; /* Darker text for questions */
+    font-weight: 600; /* Slightly bolder font */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #6c2121; /* Slightly darker on hover */
+}
+
+/* Customizing the default arrow for <summary> */
+.faq-question::-webkit-details-marker {
+    display: none; /* Hide default arrow in WebKit browsers */
+}
+
+.faq-question::after {
+    content: '+'; /* Plus sign for closed state */
+    font-size: 24px;
+    color: #9d7070;
+    line-height: 1; /* Align vertically */
+    transition: transform 0.3s ease;
+}
+
+details[open] .faq-question::after {
+    content: '-'; /* Minus sign for open state */
+    transform: rotate(0deg); /* No rotation needed for minus */
+}
+
+/* Styling the answer content */
+.faq-answer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee; /* Separator line between question and answer */
+    background-color: #fff;
+    color: #7f7070;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 
