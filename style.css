@@ -34,13 +34,14 @@ img {
 }
 
 body {
-    background-image: url('./pampulha.jpg') ; /* Substitua pelo caminho real da sua imagem */
-
-    background-position: center top; /* Centraliza horizontalmente e alinha ao topo */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
-    margin: 0; /* Remove a margem padrão do body */
-    padding: 0; /* Remove o padding padrão do body */
+    background-image: url('./pampulha.jpg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .nav-container {
@@ -50,7 +51,8 @@ body {
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 1000;    
+    z-index: 10;    
+    width: 100%; /* Ocupa 100% da largura */
 }
 
 .nav-container .logo {
@@ -76,7 +78,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #084f54; /* Cor de destaque Fanta */
+    color: #084f54;
 }
 
 .Menu-icon {
@@ -95,7 +97,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #ffffffd0;
     padding: 3rem;
 }
 
@@ -105,7 +107,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-size: 7rem; 
-    font-weight: 900rem;
+    font-weight: 100rem;
     line-height: 1.2; 
     
 
@@ -151,6 +153,23 @@ body {
 
 /* Seção "Missões e Ações" */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .missõeseações {
     position: relative;
     height: flex; 
@@ -158,7 +177,7 @@ body {
     flex-direction: row; /* Mantém os itens em linha */
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
     gap: 20px; /* Espaço entre os itens */
-    background-color: #2c6888;
+    background-color: #204254;
     padding: 3rem;
     padding-left: 1.5rem;
     align-items: flex-start; /* Alinha os itens ao topo */
@@ -176,30 +195,24 @@ body {
 }
 
 .card1 {
-    background-color: #0c4644;
+    background-color: #2c6888;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    
+    text-align: center;
+
     /* ***** Alterações para garantir o mesmo tamanho dos cards ***** */
     flex: 1 1 auto;
-    flex-grow: 1; /* Permite que o card cresça para preencher o espaço disponível50px; /* flex-grow | flex-shrink | flex-basis */
-    /* flex-grow: 1;  -> Permite que o card cresça para preencher o espaço disponível */
-    /* flex-shrink: 1; -> Permite que o card encolha se houver pouco espaço */
-    /* flex-basis: 250px; -> Largura base para cada card */
-
-    min-height: 150px;/* ADICIONADO: Define uma altura mínima para todos os cards */
-                       /* Ajuste este valor (ex: 200px, 300px) para ser a altura do card com MAIOR conteúdo */
-    
-    max-width: calc((100% - 40px) / 3); /* Para até 3 cards por linha (ajuste o cálculo se quiser mais/menos) */
-                                     /* Se você quer 4 cards por linha, seria: calc((100% - 60px) / 4) */
-    
+    flex-grow: 1; 
+    min-height: 150px;
+    max-width: calc((100% - 40px) / 3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card1:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(229, 226, 226, 0.15);
+
 }
 
 .card1 h6 { /* Ou .card1 p, dependendo da tag que você usa para o texto */
@@ -207,9 +220,9 @@ body {
     font-size: 14px;
     margin-bottom: 1rem;
     color: #eae5e5;
-    text-align: center;
+    text-align: CENTER;
     line-height: 1.5rem;
-    justify-content: center;
+    justify-content: justify;
 
 }
 
@@ -220,6 +233,8 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Alinha o conteúdo ao topo do card */
     align-items: flex-start; /* Alinha itens internos à esquerda do card */
+        text-align: center;
+
 }
 
 
@@ -346,3 +361,142 @@ details[open] .faq-question::after {
 }
 
 
+
+
+
+
+
+
+.missõeseações {
+    background-color: #204254;
+    padding: 3rem; /* padding-bottom 5rem sobreescreverá o 3rem inferior */
+    padding-bottom: 5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.escrita h2 {
+    font: 2.5rem 'Roboto', sans-serif; /* Shorthand para font */
+    color: #60c9e6;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+    width: 100%;
+}
+
+.diagrama-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    color: #eae5e5;
+    
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    flex: 2;
+    max-width: 45%;
+}
+
+.item-diagrama {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.item-diagrama p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Pseudo-elementos (::before e ::after) da coluna esquerda e direita */
+.coluna-esquerda .item-diagrama::before,
+.coluna-direita .item-ramificado::before { /* Agrupado */
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 2px;
+    background-color: #eae5e5;
+    transform: translateY(-50%);
+}
+
+.coluna-esquerda .item-diagrama::before {
+    left: 0;
+}
+
+.coluna-direita .item-ramificado::before {
+    right: 100%;
+}
+
+.coluna-esquerda .item-diagrama:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    bottom: -15px;
+    width: 2px;
+    background-color: #eae5e5;
+    transform: translateY(-50%);
+    border-bottom-left-radius: 5px;
+    
+}
+
+.coluna-esquerda .item-diagrama:last-child::after {
+    display: none;
+}
+
+.coluna-direita .item-diagrama:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    bottom: -15px;
+    width: 2px;
+    background-color: #eae5e5;
+    transform: translateY(-50%);
+    border-bottom-left-radius: 5px;
+    
+}
+
+/* Ramificações da coluna direita */
+.coluna-direita .item-ramificado:first-child::before {
+    border-top-right-radius: 5px;
+}
+
+.coluna-direita .item-ramificado:last-child::before {
+    border-bottom-right-radius: 5px;
+}
+
+.coluna-direita .item-ramificado:first-child::after,
+.coluna-direita .item-ramificado:last-child::after { /* Agrupado */
+    content: '';
+    position: absolute;
+    right: calc(100% + 18px);
+    width: 2px;
+    background-color: #eae5e5;
+
+}
+
+.coluna-direita .item-ramificado:first-child::after {
+    top: 0;
+    height: 50%;
+}
+
+.coluna-direita .item-ramificado:last-child::after {
+    bottom: 0;
+    height: 50%;
+}
+
+.coluna-direita .item-ramificado:only-child::before {
+    border-radius: 0;
+}
+
+.coluna-direita .item-ramificado:only-child::after {
+    display: none;
+}
