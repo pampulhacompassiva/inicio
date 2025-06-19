@@ -79,7 +79,7 @@
     /* text
      */
     --color-text                   : var(--color-gray-19);
-    --color-text-dark              : var(--color-black);
+    --color-text-dark              : #0a3743;
     --color-text-light             : var(--color-gray-14);
     --color-placeholder            : var(--color-gray-14);
 
@@ -106,7 +106,7 @@
 
     /* others
      */
-    --color-body                   : white;
+    --color-body                   : #649cac;
     --color-border                 : rgba(0, 0, 0, .08);
     --border-radius                : 3px;
 }
@@ -229,14 +229,6 @@
 }
 
 
-/* ====================================================================
- * # NORMALIZE
- *
- *
- * --------------------------------------------------------------------
- * normalize.css v8.0.1 | MIT License |
- * github.com/necolas/normalize.css
- * -------------------------------------------------------------------- */
 html {
     line-height              : 1.15;
     -webkit-text-size-adjust : 100%;
@@ -1249,6 +1241,7 @@ body {
     font-weight : 400;
     line-height : var(--vspace-1);
     color       : var(--color-text);
+    text-align: justify;
 }
 
 /* links
@@ -1866,133 +1859,6 @@ img,
 }
 
 
-/* ===================================================================
- * # FORM
- *
- *
- * ------------------------------------------------------------------- */
-fieldset {
-    border  : none;
-    padding : 0;
-}
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-    --input-height      : var(--vspace-2);
-    --input-line-height : var(--vspace-1);
-    --input-vpadding    : calc(((var(--input-height) - var(--input-line-height)) / 2) - 1px);
-    display             : block;
-    height              : var(--input-height);
-    padding             : var(--input-vpadding) calc(2.4rem - 1px);
-    border              : 0;
-    outline             : 0;
-    color               : var(--color-placeholder);
-    font-family         : var(--font-1);
-    font-size           : var(--text-sm);
-    font-size           : calc(var(--text-size) * 0.8889);
-    line-height         : var(--input-line-height);
-    max-width           : 100%;
-    background-color    : var(--color-gray-5);
-    border              : 1px solid transparent;
-    transition          : all .3s ease-in-out;
-}
-
-.ss-custom-select {
-    position : relative;
-    padding  : 0;
-}
-
-.ss-custom-select select {
-    -webkit-appearance : none;
-    -moz-appearance    : none;
-    appearance         : none;
-    text-indent        : 0.01px;
-    text-overflow      : '';
-    margin             : 0;
-    vertical-align     : middle;
-}
-
-.ss-custom-select select option {
-    padding-left  : 2rem;
-    padding-right : 2rem;
-}
-
-.ss-custom-select select::-ms-expand {
-    display : none;
-}
-
-.ss-custom-select::after {
-    border-bottom    : 2px solid black;
-    border-right     : 2px solid black;
-    content          : '';
-    display          : block;
-    height           : 8px;
-    width            : 8px;
-    margin-top       : -7px;
-    pointer-events   : none;
-    position         : absolute;
-    right            : 2.4rem;
-    top              : 50%;
-    transition       : all 0.15s ease-in-out;
-    transform-origin : 66% 66%;
-    transform        : rotate(45deg);
-}
-
-textarea {
-    min-height : calc(8 * var(--space));
-}
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-    color            : var(--color-black);
-    background-color : white;
-    box-shadow       : 0 0 5px var(--color-1);
-    border           : 1px solid var(--color-1-light);
-}
-
-label,
-legend {
-    font-family   : var(--font-1);
-    font-weight   : 600;
-    font-size     : var(--text-sm);
-    line-height   : var(--vspace-0_5);
-    margin-bottom : var(--vspace-0_5);
-    color         : var(--color-text-dark);
-    display       : block;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display : inline;
-}
-
-label>.label-text {
-    display     : inline-block;
-    margin-left : 1rem;
-    font-family : var(--font-1);
-    line-height : inherit;
-}
-
-label>input[type="checkbox"],
-label>input[type="radio"] {
-    margin   : 0;
-    position : relative;
-    top      : 2px;
-}
 
 /* ------------------------------------------------------------------- 
  * ## style placeholder text
@@ -2753,7 +2619,7 @@ img.u-pull-left {
     font-size   : calc(var(--text-size) * 1.1111);
     font-weight : 300;
     line-height : 1.8;
-    color       : var(--color-text-light);
+    color       : rgb(213, 209, 209);
 }
 
 .section-header::before {
@@ -2817,7 +2683,7 @@ img.u-pull-left {
     font-weight       : 600;
     font-size         : 1.25em;
     line-height       : 1;
-    color             : var(--color-1);
+    color             : #0a3743;
     margin-bottom     : var(--vspace-0_25);
 }
 
@@ -2976,6 +2842,7 @@ img.u-pull-left {
 .s-header__block {
     z-index : 101;
 }
+
 
 /* --------------------------------------------------------------------
  * ## logo
@@ -3343,7 +3210,7 @@ img.u-pull-left {
 
 .s-intro__content-bg {
     display             : block;
-     background-image   :linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/pampullha.jpeg);
+     background-image   :linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./imagens/pampulha.jpeg);
     background-repeat   : no-repeat;
     background-position : center;
     background-size     : cover;
@@ -3353,7 +3220,7 @@ img.u-pull-left {
     right               : var(--gutter);
     bottom              : var(--content-padding-bottom);
     left                : auto;
-    border-radius       : 4%; 
+    border-radius       : 6%; 
 
 }
 
@@ -3370,6 +3237,7 @@ img.u-pull-left {
     background     : linear-gradient(90deg, black 20%, rgba(0, 0, 0, 0) 100%);
     pointer-events : none;
     opacity        : 0;
+    border-radius  : 6%; 
 }
 
 .s-intro__content-title {
@@ -3403,19 +3271,21 @@ img.u-pull-left {
     display: flex;
     flex-wrap: wrap; /* Para responsividade */
     align-items: center;
-    padding: 30rem 4rem; 
-    background-color: #609aaa;
+    padding: 15rem 8rem; 
+    background-color: #649cac;
 }
 
 .two .left-side,
 .two .right-side {
     flex: 1;
     min-width: 300px; /* Para quebra em telas menores */
-    padding: 1rem;
+    padding: 2rem;
     text-align: justify; /* Justifica o texto */
     margin-bottom: 10px;
     font-family: var(--font-2);
+
 }
+
 
 .two .left-side png {
     width: 100%;
@@ -3426,11 +3296,14 @@ img.u-pull-left {
 }
 
 .two .right-side h2 {
-    font-size: var(--text-xxl);
-    color: #075064;
-    margin-bottom: 1rem;
+
     line-height: calc(1.375 * var(--space));
     letter-spacing: -.015em;
+    
+    font-size: var(--text-xxl);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0;
 }
 
 .two .right-side p {
@@ -3440,7 +3313,7 @@ font-family: var(--font-2);
     text-rendering: optimizeLegibility;
     font-weight: 300;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text);
 }
 
 
@@ -3690,14 +3563,24 @@ font-family: var(--font-2);
 
 
 /* ===================================================================
- * # SERVICES
+ * # Seção Cuidados Paliativos
  *
  *
  * ------------------------------------------------------------------- */
 .s-services {
-    background-color : var(--color-gray-2);
+    background-color : #0a3743;
     padding-top      : var(--vspace-5);
     padding-bottom   : var(--vspace-5);
+    color: rgb(213, 209, 209);
+    
+}
+
+.titulo {
+    color: #649cac;
+    font-size: var(--text-xxl);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0;
 }
 
 .s-services .list-block__item {
@@ -4522,3 +4405,5 @@ font-family: var(--font-2);
         width  : var(--vspace-1_5);
     }
 }
+
+
