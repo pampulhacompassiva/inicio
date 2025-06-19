@@ -3210,7 +3210,7 @@ img.u-pull-left {
 
 .s-intro__content-bg {
     display             : block;
-     background-image   :linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./imagens/pampulha.jpeg);
+     background-image   :linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./pampulha.jpeg);
     background-repeat   : no-repeat;
     background-position : center;
     background-size     : cover;
