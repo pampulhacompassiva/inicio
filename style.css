@@ -3274,7 +3274,7 @@ img.u-pull-left {
     display: flex;
     flex-wrap: wrap; /* Para responsividade */
     align-items: center;
-    padding: 15rem 1rem; 
+    padding: 15rem 1rem;
     background-color: #649cac;
 }
 
