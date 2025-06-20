@@ -2850,7 +2850,7 @@ img.u-pull-left {
 .s-header__logo {
     z-index     : 3;
     line-height : 1;
-    transform   : translate(4px, 0);
+    transform   : relative (4px, 0);
 }
 
 .s-header__logo a {
@@ -2862,7 +2862,7 @@ img.u-pull-left {
 }
 
 .s-header__logo img {
-    margin         : 0;
+    margin         : 10px 0 0 0;
     vertical-align : bottom;
     width          : 60px;
 }
@@ -3116,7 +3116,10 @@ img.u-pull-left {
 
 @media screen and (max-width: 400px) {
     .s-header__logo {
-        transform : translate(7vw, -50%);
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        transform : translate(7vw, -40%);
     }
 
     .s-header__nav {
@@ -3271,7 +3274,7 @@ img.u-pull-left {
     display: flex;
     flex-wrap: wrap; /* Para responsividade */
     align-items: center;
-    padding: 15rem 8rem; 
+    padding: 15rem 1rem; 
     background-color: #649cac;
 }
 
